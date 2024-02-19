@@ -24,7 +24,7 @@ dependencies = [
 Homepage = "https://github.com/~tboudreaux/dokuUpload"
 
 [project.scripts]
-your-command = "dokuUpload.cli:main"
+dokuUpload = "dokuUpload.cli:main"
 
 [tool.setuptools.dynamic]
 version = {attr = "fidanka.__version__"}
