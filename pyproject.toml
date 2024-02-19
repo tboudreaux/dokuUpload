@@ -14,6 +14,11 @@ classifiers = [
     "License :: OSI Approved :: MIT License",
     "Operating System :: OS Independent",
 ]
+dynamic = ["version"]
+dependencies = [
+  "openai",
+  "dokuwiki",
+	]
 
 [project.urls]
 Homepage = "https://github.com/~tboudreaux/dokuUpload"
@@ -21,7 +26,5 @@ Homepage = "https://github.com/~tboudreaux/dokuUpload"
 [project.scripts]
 your-command = "dokuUpload.cli:main"
 
-# Optional: if you have dependencies
-[project.dependencies]
-openai = "~=0.2.0"
-dekuwiki = "~=0.1.0"
+[tool.setuptools.dynamic]
+version = {attr = "fidanka.__version__"}
