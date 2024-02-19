@@ -4,11 +4,9 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "dokuUpload"
-version = "0.1.0"
 description = "A simple tool to upload files to a dokuwiki and generate ai description pages"
 authors = [{name = "Emily M. Boudreaux", email = "emily@boudreauxmail.com"}]
 readme = "README.md"
-keywords = ["CLI", "dokuwiki", "upload", "description", "GPT"]
 classifiers = [
     "Programming Language :: Python :: 3",
     "License :: OSI Approved :: MIT License",
@@ -20,11 +18,12 @@ dependencies = [
   "dokuwiki",
 	]
 
+
 [project.urls]
 Homepage = "https://github.com/~tboudreaux/dokuUpload"
 
 [project.scripts]
-dokuUpload = "dokuUpload.cli:main"
+dokuUpload = "dokuUpload.cli.cli:main"
 
 [tool.setuptools.dynamic]
-version = {attr = "fidanka.__version__"}
+version = {attr = "dokuUpload.__version__"}

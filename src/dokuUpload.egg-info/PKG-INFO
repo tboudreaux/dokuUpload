@@ -1,3 +1,16 @@
+Metadata-Version: 2.1
+Name: dokuUpload
+Version: 0.0.1
+Summary: A simple tool to upload files to a dokuwiki and generate ai description pages
+Author-email: "Emily M. Boudreaux" <emily@boudreauxmail.com>
+Project-URL: Homepage, https://github.com/~tboudreaux/dokuUpload
+Classifier: Programming Language :: Python :: 3
+Classifier: License :: OSI Approved :: MIT License
+Classifier: Operating System :: OS Independent
+Description-Content-Type: text/markdown
+Requires-Dist: openai
+Requires-Dist: dokuwiki
+
 # AI Driven page builder for DekuWiki
 A tool to build pages for DekuWiki based on files
 and generate summaries using AI.
@@ -23,13 +36,7 @@ and should be avalible as a shell command after installation.
 
 
 # Usage
-You can test if your configuration works using
-```bash
-dokuUpload --test
-```
-
-
-The main usage is to store files on dokuWiki. Lets say you have a python file in the current directory called KDE.py
+Lets say you have a python file in the current directory called KDE.py
 you could create a page about that file on dokuWiki by running the following
 command
 

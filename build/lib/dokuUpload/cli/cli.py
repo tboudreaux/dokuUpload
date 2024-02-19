@@ -23,7 +23,7 @@ def main():
             print("Login successful!")
         else:
             from dokuUpload.utils.setup import CONFIG
-            print(f"Login failed! {CONFIG.DOKU_USER}:{CONFIG.DOKU_PASSWORD}@{CONFIG.DOKU_URL}")
+            print(f"Login failed! {CONFIG.DOKU_USER}@{CONFIG.DOKU_URL}")
     else:
         for file in args.files:
             assert os.path.exists(file), f'File {file} does not exist'
