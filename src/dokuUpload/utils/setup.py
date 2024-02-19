@@ -1,7 +1,15 @@
 import os
 from typing import Dict
+from dataclasses import dataclass
 
-def setup() -> Dict:
+@dataclass
+class Config:
+    API_KEY: str
+    DEKU_USER: str
+    DEKU_PASSWORD: str
+    DEKU_URL: str
+
+def setup() -> Config:
     """
     Get all the environment variables needed to run
     the deku wiki uploader
@@ -35,5 +43,9 @@ def setup() -> Dict:
             'DEKU_URL': DEKU_URL
             }
 
+    cfg = Config(**cfg)
+
     return cfg
+
+CONFIG = setup()
 

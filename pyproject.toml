@@ -1,0 +1,27 @@
+[build-system]
+requires = ["setuptools>=42", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "dokuUpload"
+version = "0.1.0"
+description = "A simple tool to upload files to a dokuwiki and generate ai description pages"
+authors = [{name = "Emily M. Boudreaux", email = "emily@boudreauxmail.com"}]
+readme = "README.md"
+keywords = ["CLI", "dokuwiki", "upload", "description", "GPT"]
+classifiers = [
+    "Programming Language :: Python :: 3",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+]
+
+[project.urls]
+Homepage = "https://github.com/~tboudreaux/dokuUpload"
+
+[project.scripts]
+your-command = "dokuUpload.cli:main"
+
+# Optional: if you have dependencies
+[project.dependencies]
+openai = "~=0.2.0"
+dekuwiki = "~=0.1.0"
