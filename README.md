@@ -72,8 +72,7 @@ summarize) then you will want to introduce a new mimetype. First add the extensi
 handler to the EXTENSION_LOOKUP dictionary in dispactch.py. Then impliment your custom
 handler. Each handler needs to have the same interface. The handler interface takes a 
 filepath and returns content, metadata, and dMarkdown. content is what will be included
-in the page from the file, metadata is a dict containing a title, likeley file tupe (lft)
-and a description (dft). Finally dMarkdown is a boolean which controls wheather content
+in the page from the file, metadata is a dict which is returned from the generate_ai_description function in dokuUpload.gpt. Finally dMarkdown is a boolean which controls wheather content
 will be placed in a code tag with the file type determined by the lft field in metadata
 or if it will be directly embedded. If false it will be a code block, otherwise it will
 be directly embedded.
