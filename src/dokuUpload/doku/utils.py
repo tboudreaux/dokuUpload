@@ -8,3 +8,7 @@ def test_login():
     password = CONFIG.DOKU_PASSWORD
     wiki = dokuwiki.DokuWiki(url, username, password)
     return wiki.login(username, password)
+
+def check_page_exists(pageID):
+    wiki = dokuwiki.DokuWiki(CONFIG.DOKU_URL, CONFIG.DOKU_USER, CONFIG.DOKU_PASSWORD)
+    return wiki.pages.get(pageID) != ''

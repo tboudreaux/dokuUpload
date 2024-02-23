@@ -36,7 +36,13 @@ and should be avalible as a shell command after installation.
 
 
 # Usage
-Lets say you have a python file in the current directory called KDE.py
+You can test if your configuration works using
+```bash
+dokuUpload --test
+```
+
+
+The main usage is to store files on dokuWiki. Lets say you have a python file in the current directory called KDE.py
 you could create a page about that file on dokuWiki by running the following
 command
 

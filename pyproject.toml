@@ -16,6 +16,9 @@ dynamic = ["version"]
 dependencies = [
   "openai",
   "dokuwiki",
+  "nbconvert",
+  "nbformat",
+  "Ipython"
 	]
 
 
